@@ -1,10 +1,11 @@
 {
-    "folders":  [
-                    {
-                        "path":  ".AL-Go"
-                    }
-                ],
-    "settings":  {
-
-                 }
+  "folders": [
+    {
+      "path": ".AL-Go"
+    },
+    {
+      "path": "Document Capture Document Viewer"
+    }
+  ],
+  "settings": {}
 }
