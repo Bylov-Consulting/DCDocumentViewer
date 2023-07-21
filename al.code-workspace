@@ -4,8 +4,12 @@
       "path": ".AL-Go"
     },
     {
-      "path": "Document Capture Document Viewer"
+      "path": "DC Document Viewer"
     }
   ],
-  "settings": {}
+  "settings": {
+    "al.codeAnalyzers": [
+      "${AppSourceCop}"
+    ]
+  }
 }

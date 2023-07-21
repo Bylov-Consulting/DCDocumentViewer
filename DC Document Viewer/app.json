@@ -1,0 +1,47 @@
+{
+  "id": "932a3a29-7f1e-4ce1-a0f1-e5e7052026f9",
+  "name": "DC Document Viewer",
+  "publisher": "Bylov Consulting",
+  "version": "1.0.0.0",
+  "brief": "Adding support for viewing Document Capture Files from General Ledger Entries page.",
+  "description": "Adding support for viewing Document Capture Files from General Ledger Entries page.",
+  "privacyStatement": "http://bylov.net",
+  "EULA": "http://bylov.net",
+  "help": "http://bylov.net",
+  "url": "http://bylov.net",
+  "logo": ".\\BCLogo.png",
+  "contextSensitiveHelpUrl": "http://bylov.net",
+  "applicationInsightsConnectionString": "d916d50c-b7fb-493b-a685-41c2179168b5", 
+  "dependencies": [
+    {
+      "id": "4b915d7e-c02a-435f-85ab-649086c1e002",
+      "publisher": "Continia Software",
+      "name": "Continia Core",
+      "version": "8.0.0.0"
+    },
+    {
+      "id": "6da8dd2f-e698-461f-9147-8e404244dd85",
+      "publisher": "Continia Software",
+      "name": "Continia Document Capture",
+      "version": "11.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "22.0.0.0",
+  "idRanges": [
+    {
+      "from": 71851575,
+      "to": 71852574
+    }
+  ],
+  "features": [
+    "NoImplicitWith",
+    "TranslationFile"
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  }
+}
