@@ -1,5 +1,5 @@
 {
   "type": "AppSource App",
   "templateUrl": "https://github.com/microsoft/AL-Go-AppSource@main",
-  "appSourceCopMandatoryAffixes": ["BYL"],
+  "appSourceCopMandatoryAffixes": ["BYL"]
 }
