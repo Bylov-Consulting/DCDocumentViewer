@@ -1,8 +1,6 @@
 {
   "country": "dk",
-  "appSourceCopMandatoryAffixes": [
-    "BYL"
-  ],
+  "appSourceCopMandatoryAffixes": ["BYL"],
   "appFolders": [],
   "testFolders": [],
   "bcptTestFolders": [],
