@@ -1,9 +1,8 @@
 {
   "country": "dk",
-  "appSourceCopMandatoryAffixes": [
-    "BYL"
-  ],
+  "appSourceCopMandatoryAffixes": ["BYL"],
   "appFolders": [],
   "testFolders": [],
-  "bcptTestFolders": []
+  "bcptTestFolders": [],
+  "installApps": ["DC Document Viewer\\Continia\\Core 8.1.0.273509 - 22.1 (BC 2023 Wave 1 CU1).app","DC Document Viewer\\Continia\\DC 11.1.0.273474 - 22.1 (BC 2023 Wave 1 CU1).app","DC Document Viewer\\Continia\\CDN 5.1.0.270381 - 22.1 (BC 2023 Wave 1 CU1).app"]
 }
