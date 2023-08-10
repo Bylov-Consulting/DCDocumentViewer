@@ -2,11 +2,34 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Attach: Microsoft cloud sandbox",
+            "type": "al",
+            "request": "attach",
+            "environmentType": "Sandbox",
+            "environmentName": "sandbox",
+            "breakOnError": "All",
+            "breakOnRecordWrite": "None",
+            "enableSqlInformationDebugger": true,
+            "enableLongRunningSqlStatements": true,
+            "longRunningSqlStatementsThreshold": 500,
+            "numberOfSqlStatements": 10,
+            "breakOnNext": "WebClient",
+        },
+        {
+            "name": "snapshotInitialize: Microsoft production cloud",
+            "type": "al",
+            "request": "snapshotInitialize",
+            "environmentType": "Sandbox",
+            "environmentName": "Sandbox",
+            "breakOnNext": "WebClient",
+            "executionContext": "DebugAndProfile"
+        },
+        {
             "name": "Publish: Microsoft cloud sandbox",
             "type": "al",
             "request": "launch",
             "environmentType": "Sandbox",
-            "environmentName": "CDCDemo",
+            "environmentName": "Sandbox",
             "startupObjectId": 22,
             "breakOnError": "All",
             "breakOnRecordWrite": "None",
@@ -16,6 +39,5 @@
             "longRunningSqlStatementsThreshold": 500,
             "numberOfSqlStatements": 10
         }
-        
     ]
 }
