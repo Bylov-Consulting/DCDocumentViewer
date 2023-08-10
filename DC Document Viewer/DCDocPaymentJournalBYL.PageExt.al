@@ -8,7 +8,7 @@ pageextension 71851576 "DC Doc Payment Journal BYL" extends "Payment Journal"
             part(CDCCaptureUIBYL; "DC Addin Payment Journal BYL")
             {
                 Caption = 'Document';
-                SubPageLink = "Journal Template Name" = field("Journal Template Name"), "Journal Batch Name" = field("Journal Template Name"), "Line No." = field("Line No.");
+                SubPageLink = "Journal Template Name" = field("Journal Template Name"), "Journal Batch Name" = field("Journal Batch Name"), "Line No." = field("Line No.");
                 SubPageView = sorting("Line No.");
                 ApplicationArea = Basic, Suite;
                 AccessByPermission = tabledata "CDC Document Capture Setup" = R;
@@ -47,17 +47,17 @@ pageextension 71851576 "DC Doc Payment Journal BYL" extends "Payment Journal"
     begin
 
         PreAssNo := '';
-        case GenJnlLine."Document Type" of
-            GenJnlLine."Document Type"::Invoice:
+        case GenJnlLine."Applies-to Doc. Type" of
+            GenJnlLine."Applies-to Doc. Type"::Invoice:
                 begin
                     DocType := 2;
-                    if PurchInvHeader.GET(GenJnlLine."Document No.") then
+                    if PurchInvHeader.GET(GenJnlLine."Applies-to Doc. No.") then
                         PreAssNo := PurchInvHeader."Pre-Assigned No.";
                 end;
-            GenJnlLine."Document Type"::"Credit Memo":
+            GenJnlLine."Applies-to Doc. Type"::"Credit Memo":
                 begin
                     DocType := 3;
-                    if PurchCrMemoHdr.GET(GenJnlLine."Document No.") then
+                    if PurchCrMemoHdr.GET(GenJnlLine."Applies-to Doc. No.") then
                         PreAssNo := PurchCrMemoHdr."Pre-Assigned No.";
                 end;
             else

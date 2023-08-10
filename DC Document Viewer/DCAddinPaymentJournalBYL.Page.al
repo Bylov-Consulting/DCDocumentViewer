@@ -33,10 +33,6 @@ page 71851576 "DC Addin Payment Journal BYL"
         }
     }
 
-    actions
-    {
-    }
-
     trigger OnAfterGetRecord()
     var
         PurchCrMemoHdr: record "Purch. Cr. Memo Hdr.";
@@ -47,21 +43,21 @@ page 71851576 "DC Addin Payment Journal BYL"
         if GuiAllowed then begin
 
             PreAssNo := '';
-            case Rec."Document Type" of
-                Rec."Document Type"::Invoice:
+            case Rec."Applies-to Doc. Type" of
+                Rec."Applies-to Doc. Type"::Invoice:
                     begin
                         DocType := 2;
-                        if PurchInvHeader.GET(Rec."Document No.") then
+                        if PurchInvHeader.GET(Rec."Applies-to Doc. No.") then
                             PreAssNo := PurchInvHeader."Pre-Assigned No.";
                     end;
-                Rec."Document Type"::"Credit Memo":
+                Rec."Applies-to Doc. Type"::"Credit Memo":
                     begin
                         DocType := 3;
-                        if PurchCrMemoHdr.GET(Rec."Document No.") then
+                        if PurchCrMemoHdr.GET(Rec."Applies-to Doc. No.") then
                             PreAssNo := PurchCrMemoHdr."Pre-Assigned No.";
                     end;
             end;
-            if ((Rec."Document Type" <> xRec."Document Type") or (Rec."Document No." <> xRec."Document No.")) and (DocType <> 0) then begin
+            if ((Rec."Applies-to Doc. Type" <> xRec."Applies-to Doc. Type") or (Rec."Applies-to Doc. No." <> xRec."Applies-to Doc. No.")) and (DocType <> 0) then begin
                 Document.SETCURRENTKEY("Created Doc. Table No.", "Created Doc. Subtype", "Created Doc. No.", "Created Doc. Ref. No.");
                 Document.SETRANGE("Created Doc. Table No.", DATABASE::"Purchase Header");
                 Document.SETRANGE("Created Doc. Subtype", DocType);
