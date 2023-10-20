@@ -4,5 +4,7 @@
   "appFolders": [],
   "testFolders": [],
   "bcptTestFolders": [],
-  "installApps": ["DC Document Viewer\\Continia\\Core 8.1.0.273509 - 22.1 (BC 2023 Wave 1 CU1).app","DC Document Viewer\\Continia\\DC 11.1.0.273474 - 22.1 (BC 2023 Wave 1 CU1).app","DC Document Viewer\\Continia\\CDN 5.1.0.270381 - 22.1 (BC 2023 Wave 1 CU1).app"]
+  "installApps": ["DC Document Viewer\\Continia\\Core 9.0.1.185245 - 23.0 (BC 2023 Wave 2).app",
+  "DC Document Viewer\\Continia\\DC 12.0.2.195520 - 23.0 (BC 2023 Wave 2).app",
+  "DC Document Viewer\\Continia\\CDN 6.0.0.181398 - 23.0 (BC 2023 Wave 2).app"]
 }
